@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/style.css') }}">
+    <title>Welcome | Super Sprinter 3000</title>
+</head>
+<body>
+    <h1>Super Sprinter 3000</h1>
+    <p><form action="{{ url_for("add_story") }}"><button type="submit">Add new User Story</button></form></p>
+
+    <table>
+        <tr>
+            {% for item in headers %}
+            <th>{{ " ".join(item.title().split("_")) }}</th>
+            {% endfor %}
+        </tr>
+        {% for line in content %}
+            <tr>
+            {% for key in line.keys() %}
+                {% if key == "title" %}
+                    <td><a href="{{ url_for("update_story", id=line["id"]) }}">{{ line[key] }}</a></td>
+                {% elif key == "business_value" %}
+                    <td>{{ line[key] }} point</td>
+                {% elif key == "estimation" %}
+                    <td>{{ line[key] }}h</td>
+                {% else %}
+                    <td>{{ line[key] }}</td>
+                {% endif %}
+            {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

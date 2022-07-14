@@ -1,0 +1,64 @@
+h1 {
+    text-align: center;
+    background-color: lightgrey;
+}
+
+table, td, th {
+    border: 1px solid lightgrey;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+}
+
+th {
+    font-size: 1.2em;
+    background-color: #ddd;
+}
+
+td, label {
+  font-size: 1.1em;
+}
+
+a {
+  width: 100%;
+  text-align: center;
+  line-height: 1.7;
+  color: black;
+}
+
+form {
+    width: 100%;
+}
+
+input[type=text], input[type=number], textarea, select {
+  width: 100%;
+  padding: 10px 10px;
+  margin: 5px 0;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+button {
+  font-size: 1.2em;
+  width: 100%;
+  background-color: lightgrey;
+  color: black;
+  padding: 10px 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: grey;
+}

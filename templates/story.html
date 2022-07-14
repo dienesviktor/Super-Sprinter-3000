@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block add_title %}{% endblock %}
+    {% block update_title %}{% endblock %}
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body>
+    {% block add_form %}{% endblock %}
+    {% block update_form %}{% endblock %}
+    <form action="{{ url_for("read_story") }}"><button type="submit">Back to the Stories</button></form>
+</body>
+</html>
